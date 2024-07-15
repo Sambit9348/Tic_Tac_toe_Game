@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <link rel="stylesheet" href="front.css">
+</head>
+<body>
+    <div id="container">
+        <video autoplay loop muted plays-inline muted id="back-video">
+            <source src="videoreal.mp4" type="video/mp4">
+        </video>
+        <h1>
+            TIC-TAC-TOE
+        </h1>
+        <div id="form">
+            <h2>Welcome To <br> CHAT-BUDDY</h2>
+            <p>Enter TIC-TAC-TOE Name</p>
+            <input type="text" id="user-name">
+            <p>Enter TIC-TAC-TOE Password</p>
+            <input type="password" name="" id="user-pass">
+            <br>
+            <div id="show">
+            <span id="btn" onclick="change()"><i class='fa-regular fa-eye-slash fa-flip'></i></span>
+        </div>
+            <br>
+            <button id="login-button" onclick="changepage()">Log-In</button>
+
+        </div>
+    </div>
+
+    <script>
+    var password= document.getElementById("user-pass"); 
+    var username = document.getElementById("user-name");
+        function change()
+        {
+            var button = document.getElementById("btn");
+        
+        if (password.type === "password")
+        {
+            password.type = "text";
+        button.innerHTML="<i class='fa-regular fa-eye fa-flip'>"
+
+        }
+        else
+        {
+            password.type= "password";
+        button.innerHTML="<i class='fa-regular fa-eye-slash fa-flip'>"
+
+        }
+        }
+       
+        function changepage()
+        {
+            if (password.value == "12345" && username.value == "tictactoe")
+            {
+               
+                window.location.replace("tic-tac.html");
+            }
+        }
+    </script>
+</body>
+</html>
